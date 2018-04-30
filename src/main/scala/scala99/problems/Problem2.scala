@@ -7,14 +7,14 @@ object Problem2 {
 
   def findSecondLastElementOfList(list: List[Int]): Int ={
     list match {
-      case x::y::Nil => x;
-      case x::xs =>  findSecondLastElementOfList(xs)
+      case x :: y :: Nil => x;
+      case x :: xs =>  findSecondLastElementOfList(xs)
       case _ => throw new UnsupportedOperationException("List with less than two element")
     }
   }
 
   def main(args: Array[String]): Unit = {
-    println("Second Last Element: " + findSecondLastElementOfList(List(1)));
+    println("Second Last Element: " + findSecondLastElementOfList(List(1,3,4,5,6)));
   }
 
 }

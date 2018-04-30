@@ -7,9 +7,9 @@ object Problem1 {
 
   def findLastElementOfList(list: List[Int]): Int ={
         list match {
+          case head :: Nil => head;
+          case head :: tail => findLastElementOfList(tail)
           case Nil => throw new NoSuchElementException("empty list")
-          case head::Nil => head;
-          case head:: tail => findLastElementOfList(tail)
         }
   }
 
